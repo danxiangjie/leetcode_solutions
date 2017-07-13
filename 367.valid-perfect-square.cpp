@@ -32,6 +32,13 @@
  * Credits:Special thanks to @elmirap for adding this problem and creating all
  * test cases.
  */
+
+/* 思路：
+ * 判断一个数的平方根是不是整数，不能使用 sqrt 等内建方法
+ * 二分查找，直到找到平方等于该数的数
+ * 注意越界，使用 long
+ */
+
 class Solution {
 public:
     bool isPerfectSquare(int num) {
