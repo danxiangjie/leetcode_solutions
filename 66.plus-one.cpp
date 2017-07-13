@@ -17,6 +17,12 @@
  * The digits are stored such that the most significant digit is at the head of
  * the list.
  */
+
+/* 思路
+ * 数组表示的一个数，加上一，返回新的数组
+ * 从后往前进位
+ */
+
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
