@@ -31,6 +31,13 @@
  * 
  * 
  */
+
+/* 思路：
+ * 尽量把大的和大的放在一起，小的和小的放在一起，如果一大一小的话会浪费掉大的。
+ * 排序，隔一个相加。
+ * 内建 sort函数 的时间复杂度是 O(nlogn)，可以接受。
+ */
+
 class Solution {
 public:
     int arrayPairSum(vector<int>& nums) {
