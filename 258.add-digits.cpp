@@ -28,6 +28,15 @@
  * Credits:Special thanks to @jianchao.li.fighter for adding this problem and
  * creating all test cases.
  */
+
+/* 思路：
+ * 题意是将一个数的各个位相加，知道只有一位
+ * 时间复杂度要求 O(1)
+ * 参照：https://en.wikipedia.org/wiki/Digital_root
+ * dr(n) = 1 + (n-1) mod 9
+ * 可直接求解
+ */
+
 class Solution {
 public:
     int addDigits(int num) {
