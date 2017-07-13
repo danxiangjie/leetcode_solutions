@@ -17,6 +17,14 @@
  * 
  */
 
+/* 思路
+ * 用减法做除法
+ * 如果直接减TLE
+ * 使用位移运算
+ * https://discuss.leetcode.com/topic/15568/detailed-explained-8ms-c-solution
+ * 注意判断越界
+ */
+
 class Solution {
 public:
     int divide(int dividend, int divisor) {
