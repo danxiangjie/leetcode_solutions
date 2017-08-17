@@ -35,25 +35,24 @@
 class Solution {
 public:
     vector<string> findWords(vector<string>& words) {
-        string rows[3] = {"qwertyuiop", "asdfghjkl", "zxcvbnm"};
+        string rows[3] = {"qwertyuiopQWERTYUIOP", "asdfghjklASDFGHJKL", "zxcvbnmZXCVBNM"};
         map<char, int> alpha;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < rows[i].length(); j++)
                 alpha[rows[i][j]] = i;
         
         vector<string> newWords;
-        for (int i = 0; i < words.size(); i++) {
+        for (auto str : words) {
             bool flag = true;
-            int row = alpha[tolower(words[i][0])];
-            for (int j = 1; j < words[i].length(); j++)
-                if (row != alpha[tolower(words[i][j])]) {
+            int row = alpha[str[0]];
+            for (int j = 1; j < str.length(); j++)
+                if (row != alpha[str[j]]) {
                     flag = false;
                     break;
                 }
             if (flag)
-                newWords.push_back(words[i]);
+                newWords.push_back(str);
         }
         return newWords;
-            
     }
 };
