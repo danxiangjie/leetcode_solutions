@@ -11,6 +11,10 @@ Above is a 3 x 7 grid. How many possible unique paths are there?
 
 Note: m and n will be at most 100.
 
+规律题，纸上推理。
+
+#### C++
+
 ```cpp
 inline int min(int m, int n) { return m < n ? m : n; }
 class Solution {
