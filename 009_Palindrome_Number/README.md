@@ -16,10 +16,29 @@ There is a more generic way of solving this problem.
 #### Python
 
 ```python
-
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if x < 0 or (x > 0 and x % 10 == 0):
+            return False;
+        return str(x) == str(x)[::-1];
+```
 
 #### Java
 
+```java
+public class Solution {
+    public boolean isPalindrome(int x) {
+        if (x < 0 || (x > 0 && x % 10 == 0)) return false;
+        String xx = new Integer(x).toString();
+        String newX = new StringBuilder(xx).reverse().toString();
+        return newX.equals(xx);
+    }
+}
+```
 
 #### JS
 
